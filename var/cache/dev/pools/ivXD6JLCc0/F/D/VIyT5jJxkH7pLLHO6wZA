@@ -1,0 +1,40 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\OneToMany'] ?? Registry::p('Doctrine\\ORM\\Mapping\\OneToMany')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Count'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\Count')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'mappedBy' => [
+                'country',
+            ],
+            'targetEntity' => [
+                'App\\Entity\\State',
+            ],
+            'orphanRemoval' => [
+                true,
+            ],
+            'minMessage' => [
+                1 => 'Maximum of five states per country',
+            ],
+            'max' => [
+                1 => '5',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+);

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main{% endblock %}
+
+{% block body %}
+    <h1>Add data using a CSV file</h1>
+
+    {# read and display all flash messages #}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="form-{{ label }}">
+                {{ message }}
+            </div>
+            <br />
+        {% endfor %}
+    {% endfor %}
+
+    {{ form_start(form) }}
+
+        {{ form_errors(form) }}
+
+    <div class="form-group">
+        {{ form_row(form.file) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.append) }}
+    </div>
+
+    <button class="btn btn-primary">{{ button_label|default('Import') }}</button>
+
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main{% endblock %}
+
+{% block back %}{% endblock %}
+
+{% block body %}
+
+    <h1 class="bd-title">Main</h1>
+
+    <ul>
+        <li><a href="{{ path('country_index') }}">Manage Countries</a></li>
+        <li><a href="{{ path('state_index') }}">Manage States</a></li>
+        <li><a href="{{ path('county_index') }}">Manage Counties</a></li>
+        <li><a href="{{ path('import_index') }}">Import Data</a></li>
+        <li><a href="{{ path('statistics_index') }}">Show Statistics</a></li>
+    </ul>
+
+{% endblock %}

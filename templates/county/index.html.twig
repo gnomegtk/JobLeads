@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}County index{% endblock %}
+
+{% block body %}
+    <h1>County index</h1>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Country</th>
+                <th scope="col">State</th>
+                <th scope="col">Name</th>
+                <th scope="col">actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for county in counties %}
+            <tr>
+                <td>{{ county.id }}</td>
+                <td>{{ county.state.country.name }}</td>
+                <td>{{ county.state.name }}</td>
+                <td>{{ county.name }}</td>
+                <td>
+                    <a href="{{ path('county_show', {'id': county.id}) }}">show</a>
+                    <a href="{{ path('county_edit', {'id': county.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('county_new') }}">Create new</a>
+{% endblock %}

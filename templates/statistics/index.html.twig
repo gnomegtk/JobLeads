@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Statistics{% endblock %}
+
+{% block body %}
+
+    <h1 class="bd-title">Statistics</h1>
+
+    <ul>
+        <li><a href="{{ path('statistics_collected_taxes_per_state') }}">Overall amount of taxes collected per state</a></li>
+        <li><a href="{{ path('statistics_average_amount_taxes_collected_per_state') }}">Average amount of taxes collected per state</a></li>
+        <li><a href="{{ path('statistics_average_county_taxrate_per_state') }}">Average county tax rate per state</li>
+        <li><a href="{{ path('statistics_average_taxrate_per_country') }}">Average tax rate per country</a></li>
+        <li><a href="{{ path('statistics_collected_taxes_per_country') }}">Collected overall taxes per country</li>
+    </ul>
+
+{% endblock %}

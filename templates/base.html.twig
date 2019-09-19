@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        {% endblock %}
+    </head>
+    <body>
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+            {% block back %}
+                <a href="{{ path('index') }}" class="btn btn-primary" role="button">Home</a>
+                <br /><br />
+            {% endblock %}
+            {% block body %}{% endblock %}
+            {% block javascripts %}{% endblock %}
+        </main>
+    </body>
+</html>
