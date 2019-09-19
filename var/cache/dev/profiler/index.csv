@@ -75,3 +75,9 @@ bd93c5,172.17.0.13,GET,http://jobleads.project.localhost/county/1/edit,156891972
 875170,172.17.0.13,POST,http://jobleads.project.localhost/county/1/edit,1568919721,,302
 0e0b59,172.17.0.13,GET,http://jobleads.project.localhost/county/,1568919721,,200
 77c02c,172.17.0.13,GET,http://jobleads.project.localhost/,1568919723,,200
+a032d5,172.17.0.13,GET,http://jobleads.project.localhost/import,1568924658,,200
+3549f4,172.17.0.13,GET,http://jobleads.project.localhost/import,1568924846,,200
+00de24,172.17.0.13,GET,http://jobleads.project.localhost/import,1568924901,,200
+65c02a,172.17.0.13,GET,http://jobleads.project.localhost/import,1568924908,,200
+6dfc14,172.17.0.13,GET,http://jobleads.project.localhost/import,1568924917,,200
+4a9f2e,172.17.0.13,GET,http://jobleads.project.localhost/import,1568924938,,200
